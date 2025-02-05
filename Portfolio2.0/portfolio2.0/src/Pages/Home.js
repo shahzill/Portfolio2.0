@@ -4,6 +4,7 @@ import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
+import curve from "../Media/notch.png";
 import "../Styles/Home.css";
 
 function Home() {
@@ -14,40 +15,45 @@ function Home() {
       title: "Developer",
       company: "ScratchZero",
       duration: "June, 2023 - Present",
-      description:
-        "Worked with the client to develop several interactive websites using ReactJs, HTML, JavaScript, and CSS. Tested the website with Selenium and on different devices to ensure a user-friendly interface. Moreover, I created a hosting domain using A2 Hosting and published the website using cPanel. I set up emails for all members of the team and the company. Lastly, handled the social media campaign to launch the company.",
+      description: [
+        "Developed interactive websites using ReactJS, HTML, JavaScript, and CSS.",
+        "Tested the websites with Selenium and across different devices for a user-friendly interface.",
+        "Created a hosting domain using A2 Hosting and published the website using cPanel.",
+        "Set up emails for all team members and the company.",
+        "Managed the social media campaign for the company launch.",
+      ],
       background: "#141a46",
     },
     {
       title: "Tech Specialist",
       company: "London Drugs",
       duration: "August, 2022 - Present",
-      description:
-        "I dealt with up to 50 customers in a single day to solve their technical problems providing expert advice. Moreover, I stayed up to date with the latest technology by attending workshops organized by London Drugs. The administration commended me for being the quickest-learning employee they have ever had.",
+      description: [
+        "Assisted up to 50 customers daily, solving their technical issues and providing expert advice.",
+        "Stayed updated with the latest technology by attending London Drugs workshops.",
+        "Recognized by administration as the fastest-learning employee they have ever had.",
+      ],
       background: "#005faf",
     },
     {
       title: "Vice President of Events",
       company: "Pakistani Student Society, University of Calgary",
       duration: "March, 2022 - March, 2023",
-      description:
-        "As an executive, I arranged a wide range of events for up to 350 students. My responsibilities included dealing with different vendors to secure the best value for money deals, managing my team, and interviewing and training new junior executives.",
+      description: [
+        "Organized diverse events for up to 350 students.",
+        "Negotiated with vendors to secure cost-effective deals.",
+        "Managed a team, conducted interviews, and trained new junior executives.",
+      ],
       background: "#1d783d",
-    },
-    {
-      title: "IT Administrator",
-      company: "Temple Food Store",
-      duration: "February, 2021 - August, 2022",
-      description:
-        "I used to oversee all the IT-related problems while keeping track of the company website and taking customer calls to help them navigate. I developed a new menu with updated combos increasing sales by 40%.",
-      background: "rgb(227, 76, 38)",
     },
     {
       title: "Data Analyst Student Intern",
       company: "CEES, The University of Punjab",
       duration: "June, 2018 - January, 2019",
-      description:
-        "Recruited for helping out in publishing a research paper. I helped collect water samples and analyze the data after formulating it in a graphical manner.",
+      description: [
+        "Assisted in publishing a research paper by collecting and analyzing data.",
+        "Collected water samples and processed data into graphical representations.",
+      ],
       background: "goldenrod",
     },
   ];
@@ -162,20 +168,24 @@ function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaInstagram className="scale2 Red" />
+                <FaInstagram className="scale1 Red" />
               </a>
               <a
                 href="https://www.facebook.com/scratchzero.net?mibextid=LQQJ4d"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebookSquare className="scale3 Red" />
+                <FaFacebookSquare className="scale1 Red" />
               </a>
             </Fade>
           </div>
         </div>
       </div>
+      <div className="curve">
+        <img src={curve} />
+      </div>
       <div className="comp2" id="Our-Services">
+        <div className="ExperienceHeader">Experience</div>
         <div
           ref={containerRef}
           className={`container6 relative ${animate ? "animate-line" : ""}`}
@@ -196,7 +206,11 @@ function Home() {
                     </div>
                     <div className="w-16 h-16 bg-gray-300 rounded-full" />
                   </div>
-                  <p className="mt-2 text-sm">{exp.description}</p>
+                  <ul className="mt-2 text-sm list-disc list-inside">
+                    {exp.description.map((point, i) => (
+                      <li key={i}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </Fade>

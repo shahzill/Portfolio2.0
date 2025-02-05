@@ -50,6 +50,9 @@
   margin-top: 20px;
 }
 
+.comp3{
+  min-height: 50vh;
+}
 .About{
   color: white;
   font-size: 30px;
@@ -62,25 +65,53 @@
   font-weight: 300;
   line-height: 30px;
 }
+.Content3{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
 
+.Content3 a{
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 20px;
+}
+
+.Content3 a:hover{
+  transform: scale(1.2);
+}
+
+.scale1:hover{
+  transform: scale(1.2);
+}
 .comp2{
   width: 94%;
   min-height: 100vh;
-  margin-left: 3%;
-  margin-right: 3%;
   border-radius: 3%;
   max-height: max-content;
-  background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(61,61,61,1) 12%, rgba(120,120,120,1) 22%, rgba(207,207,207,1) 44%,
-   rgba(235,235,235,1) 58%, rgba(255,255,255,1) 81%);
-
+  margin: 0px 3%;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 1%, rgba(61,61,61,0.7) 12%, rgba(120,120,120,0.7) 22%, rgba(207,207,207,0.9) 44%,
+  rgba(235,235,235,0.9) 58%, rgba(255,255,255,1) 81%);
+  padding: 20px;
   z-index: -1;
-   /* background-image: url("../Imgs/Whiteeee.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;  */
 }
-
+.curve img{
+  height: 40%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+}
+.ExperienceHeader{
+  color: black;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 40px;
+  text-align: center;
+}
 /* Timeline.css */
 .container7 {
   position: relative;
