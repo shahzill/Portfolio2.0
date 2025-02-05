@@ -5,11 +5,21 @@ import Fade from "react-reveal/Fade";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
 import curve from "../Media/notch.png";
+import logo from "../Media/WhiteUofC.png";
+import { motion, useTransform, useScroll } from "framer-motion";
 import "../Styles/Home.css";
 
 function Home() {
   const [animate, setAnimate] = useState(false);
   const containerRef = useRef(null);
+  const cards = [
+    {
+      id: 1,
+    },
+    {
+      id: 2,
+    },
+  ];
   const experiences = [
     {
       title: "Developer",
@@ -79,6 +89,52 @@ function Home() {
       if (currentRef) observer.unobserve(currentRef);
     };
   }, []); // Empty dependency array to run effect once when the component mounts
+
+  const HorizontalScrollCarousel = () => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+      target: targetRef,
+    });
+
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
+
+    return (
+      <section ref={targetRef} className="relative h-[200vh]">
+        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+          <motion.div style={{ x }} className="flex">
+            {cards.map((card) => {
+              return <Card card={card} key={card.id} />;
+            })}
+          </motion.div>
+        </div>
+      </section>
+    );
+  };
+
+  const Card = ({ card }) => {
+    if (card.id === 1) {
+      return <div key={card.id} className="comp4"></div>;
+    } else if (card.id === 2) {
+      return (
+        <div className="education-content">
+          <h2 className="text-3xl font-bold mb-4">
+            Bachelor of Science, Software Engineering
+          </h2>
+          <p className="text-xl mb-4">Sep 2020 – May 2025</p>
+          <p className="text-xl mb-4">
+            University Of Calgary, Calgary, Alberta, Canada
+          </p>
+        </div>
+      );
+    }
+
+    // Default case if card.id isn't 1 or 2
+    return (
+      <div key={card.id} className="comp4">
+        Default Content
+      </div>
+    );
+  };
 
   return (
     <>
@@ -185,7 +241,10 @@ function Home() {
         <img src={curve} />
       </div>
       <div className="comp2" id="Our-Services">
-        <div className="ExperienceHeader">Experience</div>
+        <h1 className="ExperienceHeader">
+          <span className="Red">My </span>
+          <span>Journey </span>
+        </h1>
         <div
           ref={containerRef}
           className={`container6 relative ${animate ? "animate-line" : ""}`}
@@ -216,6 +275,15 @@ function Home() {
             </Fade>
           ))}
         </div>
+      </div>
+      <div>
+        <HorizontalScrollCarousel />
+      </div>
+      <div className="comp7">
+        <h1 className="TechStackHeader">
+          <span className="Red">My </span>
+          <span>TechStack </span>
+        </h1>
       </div>
     </>
   );

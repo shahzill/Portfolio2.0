@@ -1,8 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&family=Fira+Code:wght@300;400;500&display=swap');
+
+
 /* Global Styles */
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 /* Main container */
@@ -22,7 +29,8 @@
 
 .Red {
   color: #f4543c;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+
 }
 
 .typing {
@@ -107,9 +115,8 @@
 }
 .ExperienceHeader{
   color: black;
-  font-size: 30px;
-  font-weight: 600;
   padding: 40px;
+  font-size: 50px;
   text-align: center;
 }
 /* Timeline.css */
@@ -191,6 +198,67 @@
 .TS { background-color: rgb(227, 76, 38); }
 .CEES { background-color: goldenrod; }
 
+.comp4{
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  background-color: black;
+  background-image: url("../Media/WhiteUofC.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    z-index: -1;
+}
+.WhiteColor{
+  color: white;
+}
+.comp5 {
+  width: 100vw;
+  min-height: 100vh;
+  max-height: max-content;
+  margin: 0px;
+  color: white;
+  background-color: rgb(0, 0, 0); /* Translucent black with 50% opacity */
+}
+
+.education-content{
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+}
+
+.comp7{
+  width: 100%;
+  min-height: 100vh;
+  max-height: max-content;
+  margin: 0px;
+  color: white;
+}
+
+.comp6{
+  width: 100%;
+  min-height: 100vh;
+  max-height: max-content;
+  margin: 0px;
+  background-color: black;
+  background-image: url("../Media/ColoredUofC.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    z-index: -1;
+}
+
+.TechStackHeader{
+  color: white;
+  padding: 40px;
+  font-size: 50px;
+  text-align: center;
+}
 /* Button Styles */
 .btn:hover {
   transform: translateY(-3px);
