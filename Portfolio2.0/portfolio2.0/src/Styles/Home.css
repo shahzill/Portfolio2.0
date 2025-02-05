@@ -50,6 +50,116 @@
   margin-top: 20px;
 }
 
+.About{
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0px 20%;
+}
+
+.About p{
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.comp2{
+  width: 94%;
+  min-height: 100vh;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-radius: 3%;
+  max-height: max-content;
+  background: linear-gradient(0deg, rgba(0,0,0,1) 1%, rgba(61,61,61,1) 12%, rgba(120,120,120,1) 22%, rgba(207,207,207,1) 44%,
+   rgba(235,235,235,1) 58%, rgba(255,255,255,1) 81%);
+
+  z-index: -1;
+   /* background-image: url("../Imgs/Whiteeee.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  */
+}
+
+/* Timeline.css */
+.container7 {
+  position: relative;
+  width: 43%;
+}
+.container6{
+  width: 100%;
+  height: auto;
+  position: relative;
+  
+} 
+.container6::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 0; /* Start height at 0 */
+  background: black;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 0;
+  
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.container6.animate-line::after {
+  animation: moveline 4s linear forwards; /* Trigger animation when class is added */
+}
+
+
+.experience {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+  color: white;
+}
+
+.left {
+  left: 0;
+  margin-left: 5%;
+}
+
+.right {
+  left: 52%;
+  margin-right: 5%;
+}
+
+.LogoTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.placeholder-img {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.SZ { background-color: #141a46; }
+.LD { background-color: #005faf; }
+.PSS { background-color: #1d783d; }
+.TS { background-color: rgb(227, 76, 38); }
+.CEES { background-color: goldenrod; }
+
 /* Button Styles */
 .btn:hover {
   transform: translateY(-3px);

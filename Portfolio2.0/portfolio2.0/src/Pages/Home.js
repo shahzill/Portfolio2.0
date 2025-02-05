@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
 import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
@@ -7,6 +7,73 @@ import { ReactTyped } from "react-typed";
 import "../Styles/Home.css";
 
 function Home() {
+  const [animate, setAnimate] = useState(false);
+  const containerRef = useRef(null);
+  const experiences = [
+    {
+      title: "Developer",
+      company: "ScratchZero",
+      duration: "June, 2023 - Present",
+      description:
+        "Worked with the client to develop several interactive websites using ReactJs, HTML, JavaScript, and CSS. Tested the website with Selenium and on different devices to ensure a user-friendly interface. Moreover, I created a hosting domain using A2 Hosting and published the website using cPanel. I set up emails for all members of the team and the company. Lastly, handled the social media campaign to launch the company.",
+      background: "#141a46",
+    },
+    {
+      title: "Tech Specialist",
+      company: "London Drugs",
+      duration: "August, 2022 - Present",
+      description:
+        "I dealt with up to 50 customers in a single day to solve their technical problems providing expert advice. Moreover, I stayed up to date with the latest technology by attending workshops organized by London Drugs. The administration commended me for being the quickest-learning employee they have ever had.",
+      background: "#005faf",
+    },
+    {
+      title: "Vice President of Events",
+      company: "Pakistani Student Society, University of Calgary",
+      duration: "March, 2022 - March, 2023",
+      description:
+        "As an executive, I arranged a wide range of events for up to 350 students. My responsibilities included dealing with different vendors to secure the best value for money deals, managing my team, and interviewing and training new junior executives.",
+      background: "#1d783d",
+    },
+    {
+      title: "IT Administrator",
+      company: "Temple Food Store",
+      duration: "February, 2021 - August, 2022",
+      description:
+        "I used to oversee all the IT-related problems while keeping track of the company website and taking customer calls to help them navigate. I developed a new menu with updated combos increasing sales by 40%.",
+      background: "rgb(227, 76, 38)",
+    },
+    {
+      title: "Data Analyst Student Intern",
+      company: "CEES, The University of Punjab",
+      duration: "June, 2018 - January, 2019",
+      description:
+        "Recruited for helping out in publishing a research paper. I helped collect water samples and analyze the data after formulating it in a graphical manner.",
+      background: "goldenrod",
+    },
+  ];
+
+  useEffect(() => {
+    // Create the IntersectionObserver
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.length > 0 && entries[0].isIntersecting) {
+          // Set animate to true when container is in view
+          setAnimate(true);
+          observer.disconnect(); // Disconnect the observer once it triggers
+        }
+      },
+      { root: null, rootMargin: "0px", threshold: 0.1 } // Trigger when 50% of the element is in view
+    );
+
+    const currentRef = containerRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    // Clean up the observer when component unmounts
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, []); // Empty dependency array to run effect once when the component mounts
+
   return (
     <>
       <React.Fragment>
@@ -42,12 +109,12 @@ function Home() {
       <div className="comp3" id="AboutUs">
         <div className="subcomp3">
           {/* About Section */}
-          <Fade left>
+          <Fade up>
             <div className="About">
               <div className="Content1">
                 <h1>
-                  <span className="AllH">OUR </span>
-                  <span className="AboutH">MISSION </span>
+                  <span>About </span>
+                  <span className="Red">Me </span>
                 </h1>
                 <p>
                   At{" "}
@@ -73,38 +140,6 @@ function Home() {
                   </strong>
                   . We are not just a software company; we are your partner in
                   progress.
-                </p>
-              </div>
-            </div>
-          </Fade>
-
-          {/* Why Us */}
-          <Fade right>
-            <div className="Why-Choose-Us">
-              <div className="Content2">
-                <h1>
-                  <span className="WhyH">OUR </span>
-                  <span className="ChooseH">VISION</span>
-                </h1>
-                <p>
-                  Our{" "}
-                  <strong>
-                    <span className="Red">
-                      relentless pursuit of excellence{" "}
-                    </span>
-                  </strong>
-                  drives us to be the preferred choice for clients seeking
-                  cutting-edge solutions. Leveraging the power of{" "}
-                  <strong>
-                    <span className="Red">modern technologies</span>
-                  </strong>
-                  , we craft digital experiences that transcend the ordinary and
-                  define the extraordinary. Our{" "}
-                  <strong>
-                    <span className="Red">commitment to your success </span>
-                  </strong>{" "}
-                  is unwavering, and we are here to guide you on your journey to
-                  success.
                 </p>
               </div>
             </div>
@@ -138,6 +173,34 @@ function Home() {
               </a>
             </Fade>
           </div>
+        </div>
+      </div>
+      <div className="comp2" id="Our-Services">
+        <div
+          ref={containerRef}
+          className={`container6 relative ${animate ? "animate-line" : ""}`}
+          id="Experience"
+        >
+          {experiences.map((exp, index) => (
+            <Fade bottom key={index}>
+              <div
+                className={`container7 ${index % 2 === 0 ? "right" : "left"}`}
+                style={{ backgroundColor: exp.background }}
+              >
+                <div className="experience p-4 rounded-lg text-white">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h3 className="text-lg font-bold">{exp.title}</h3>
+                      <p className="text-sm">{exp.company}</p>
+                      <p className="text-xs italic">{exp.duration}</p>
+                    </div>
+                    <div className="w-16 h-16 bg-gray-300 rounded-full" />
+                  </div>
+                  <p className="mt-2 text-sm">{exp.description}</p>
+                </div>
+              </div>
+            </Fade>
+          ))}
         </div>
       </div>
     </>
