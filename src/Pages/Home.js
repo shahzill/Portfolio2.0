@@ -33,6 +33,10 @@ import { VscSymbolNamespace } from "react-icons/vsc"; // Alternative for Eclipse
 
 function Home() {
   const [animate, setAnimate] = useState(false);
+  const [animate1, setAnimate1] = useState(false);
+  const [animate2, setAnimate2] = useState(false);
+  const [animate3, setAnimate3] = useState(false);
+  const [animate4, setAnimate4] = useState(false);
   const containerRef = useRef(null);
   const cards = [
     {
@@ -44,6 +48,21 @@ function Home() {
   ];
   const experiences = [
     {
+      title: "Systems Developer Intern",
+      company: "Alberta Utilities Commission",
+      location: "Calgary, Canada",
+      duration: "September 2023 – Present",
+      description: [
+        "Developed web applications using Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL to deliver efficient and user-friendly solutions.",
+        "Collaborated with a team of 7 professionals, actively participating in code reviews and contributing to an Azure repository to ensure seamless code integration.",
+        "Engaged in agile development methodologies, working in sprints to meet project milestones and deadlines.",
+        "Implemented and tested new functionalities within applications, ensuring high-quality code and optimal user experiences.",
+        "Enhanced UI with Radzen, ensuring smooth development, and implemented Fluent Validation for robust data validation, elevating application quality.",
+        "Recognized for exceptional performance with an Employee Appreciation Award, including merchandise and gift cards, leading to a part-time position offer to continue contributing while managing academic responsibilities.",
+      ],
+      background: "White",
+    },
+    {
       title: "Developer",
       company: "ScratchZero",
       duration: "June, 2023 - Present",
@@ -54,18 +73,7 @@ function Home() {
         "Set up emails for all team members and the company.",
         "Managed the social media campaign for the company launch.",
       ],
-      background: "#141a46",
-    },
-    {
-      title: "Tech Specialist",
-      company: "London Drugs",
-      duration: "August, 2022 - Present",
-      description: [
-        "Assisted up to 50 customers daily, solving their technical issues and providing expert advice.",
-        "Stayed updated with the latest technology by attending London Drugs workshops.",
-        "Recognized by administration as the fastest-learning employee they have ever had.",
-      ],
-      background: "#005faf",
+      background: "Black",
     },
     {
       title: "Vice President of Events",
@@ -76,7 +84,7 @@ function Home() {
         "Negotiated with vendors to secure cost-effective deals.",
         "Managed a team, conducted interviews, and trained new junior executives.",
       ],
-      background: "#1d783d",
+      background: "White",
     },
     {
       title: "Data Analyst Student Intern",
@@ -86,7 +94,7 @@ function Home() {
         "Assisted in publishing a research paper by collecting and analyzing data.",
         "Collected water samples and processed data into graphical representations.",
       ],
-      background: "goldenrod",
+      background: "Black",
     },
   ];
 
@@ -97,6 +105,22 @@ function Home() {
         if (entries.length > 0 && entries[0].isIntersecting) {
           // Set animate to true when container is in view
           setAnimate(true);
+          setTimeout(() => {
+            setAnimate1(true);
+          }, 500); // 0.5 seconds delay
+
+          setTimeout(() => {
+            setAnimate2(true);
+          }, 1000); // 1 second delay
+
+          setTimeout(() => {
+            setAnimate3(true);
+          }, 1500); // 1.5 seconds delay
+
+          setTimeout(() => {
+            setAnimate4(true);
+          }, 2000); // 2 seconds delay
+
           observer.disconnect(); // Disconnect the observer once it triggers
         }
       },
@@ -260,8 +284,12 @@ function Home() {
       </div>
       <div className="comp2" id="Our-Services">
         <h1 className="ExperienceHeader">
-          <span className="Red">My </span>
-          <span>Journey </span>
+          <span className="Red">Exper</span>
+          <span className={`${animate4 ? "" : "Red"}`}>i</span>
+          <span className={`${animate3 ? "" : "Red"}`}>e</span>
+          <span className={`${animate2 ? "" : "Red"}`}>n</span>
+          <span className={`${animate1 ? "" : "Red"}`}>c</span>
+          <span className={`${animate ? "" : "Red"}`}>e</span>
         </h1>
         <div
           ref={containerRef}
@@ -273,16 +301,22 @@ function Home() {
               className={`container7 ${index % 2 === 0 ? "right" : "left"}`}
               style={{ backgroundColor: exp.background }}
             >
-              <div className="experience p-4 rounded-lg text-white">
-                <div className="flex justify-between items-center">
+              <div
+                className={`experience p-4 ${
+                  index % 2 === 0
+                    ? "BlackColor-Hover-Change"
+                    : "WhiteColor-Hover-Change"
+                }`}
+              >
+                <div className="flex justify-between items-center color-on-hover">
                   <div>
-                    <h3 className="text-lg font-bold">{exp.title}</h3>
+                    <h3 className="text-lg font-bold titlee">{exp.title}</h3>
                     <p className="text-sm">{exp.company}</p>
                     <p className="text-xs italic">{exp.duration}</p>
                   </div>
                   <div className="w-16 h-16 bg-gray-300 rounded-full" />
                 </div>
-                <ul className="mt-2 text-sm list-disc list-inside">
+                <ul className="mt-2 text-sm list-disc list-inside line-height-experience">
                   {exp.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

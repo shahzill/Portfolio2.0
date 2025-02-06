@@ -118,7 +118,9 @@
   padding: 40px;
   font-size: 50px;
   text-align: center;
+  font-weight: 700;
 }
+
 /* Timeline.css */
 .container7 {
   position: relative;
@@ -128,19 +130,23 @@
   width: 100%;
   height: auto;
   position: relative;
-  
 } 
+
 .container6::after {
   content: '';
   position: absolute;
   width: 6px;
   height: 0; /* Start height at 0 */
-  background: black;
+  background: #f4543c;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: 0;
   
+}
+
+.line-height-experience{
+  line-height: 25px;
 }
 
 @keyframes moveline {
@@ -153,15 +159,24 @@
 }
 
 .container6.animate-line::after {
-  animation: moveline 2s linear forwards; /* Trigger animation when class is added */
+  animation: moveline 4s linear forwards; /* Trigger animation when class is added */
 }
 
 
 .experience {
   padding: 20px 30px;
   position: relative;
-  border-radius: 6px;
   color: white;
+  transition: transform 1s ease, outline 1s ease; /* Adjusts the transition duration */
+}
+
+.experience:hover{
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.experience:hover .color-on-hover{
+  color: #f4543c;
 }
 
 .left {
@@ -212,6 +227,29 @@
 .WhiteColor{
   color: white;
 }
+
+.BlackColor{
+  color: black;
+}
+
+.WhiteColor-Hover-Change{
+  color: white;
+}
+
+.BlackColor-Hover-Change{
+  color: black;
+}
+
+.BlackColor-Hover-Change:hover{
+  color: white;
+  background-color: black;
+}
+
+.WhiteColor-Hover-Change:hover{
+  color: black;
+  background-color: white;
+}
+
 .comp5 {
   width: 100vw;
   min-height: 100vh;
