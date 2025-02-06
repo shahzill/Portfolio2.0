@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
 import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
-import Fade from "react-reveal/Fade";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
 import curve from "../Media/notch.png";
@@ -196,69 +195,65 @@ function Home() {
       <div className="comp3" id="AboutUs">
         <div className="subcomp3">
           {/* About Section */}
-          <Fade up>
-            <div className="About">
-              <div className="Content1">
-                <h1>
-                  <span>About </span>
-                  <span className="Red">Me </span>
-                </h1>
-                <p>
-                  At{" "}
-                  <strong>
-                    <span className="Red">ScratchZero</span>
-                  </strong>
-                  , we are dedicated to{" "}
-                  <strong>
-                    <span className="Red">revolutionizing </span>
-                  </strong>{" "}
-                  the way businesses and individuals engage with technology. Our
-                  mission is clear: to{" "}
-                  <strong>
-                    <span className="Red">empower our clients </span>
-                  </strong>{" "}
-                  with{" "}
-                  <strong>
-                    <span className="Red">innovative software solutions </span>
-                  </strong>
-                  that cut through complexities and pave the way for{" "}
-                  <strong>
-                    <span className="Red">unparalleled growth</span>
-                  </strong>
-                  . We are not just a software company; we are your partner in
-                  progress.
-                </p>
-              </div>
+          <div className="About">
+            <div className="Content1">
+              <h1>
+                <span>About </span>
+                <span className="Red">Me </span>
+              </h1>
+              <p>
+                At{" "}
+                <strong>
+                  <span className="Red">ScratchZero</span>
+                </strong>
+                , we are dedicated to{" "}
+                <strong>
+                  <span className="Red">revolutionizing </span>
+                </strong>{" "}
+                the way businesses and individuals engage with technology. Our
+                mission is clear: to{" "}
+                <strong>
+                  <span className="Red">empower our clients </span>
+                </strong>{" "}
+                with{" "}
+                <strong>
+                  <span className="Red">innovative software solutions </span>
+                </strong>
+                that cut through complexities and pave the way for{" "}
+                <strong>
+                  <span className="Red">unparalleled growth</span>
+                </strong>
+                . We are not just a software company; we are your partner in
+                progress.
+              </p>
             </div>
-          </Fade>
+          </div>
         </div>
 
         {/* Social Links */}
         <div className="Social-Links">
           <div className="Content3">
-            <Fade bottom>
-              <a
-                href="https://www.linkedin.com/company/scratchzero/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin className="scale1 Red" />
-              </a>
-              <a
-                href="https://www.instagram.com/scratchzero_/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="scale1 Red" />
-              </a>
-              <a
-                href="https://www.facebook.com/scratchzero.net?mibextid=LQQJ4d"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookSquare className="scale1 Red" />
-              </a>
-            </Fade>
+            <a
+              href="https://www.linkedin.com/company/scratchzero/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="scale1 Red" />
+            </a>
+            <a
+              href="https://www.instagram.com/scratchzero_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="scale1 Red" />
+            </a>
+            <a
+              href="https://www.facebook.com/scratchzero.net?mibextid=LQQJ4d"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookSquare className="scale1 Red" />
+            </a>
           </div>
         </div>
       </div>
@@ -276,28 +271,26 @@ function Home() {
           id="Experience"
         >
           {experiences.map((exp, index) => (
-            <Fade bottom key={index}>
-              <div
-                className={`container7 ${index % 2 === 0 ? "right" : "left"}`}
-                style={{ backgroundColor: exp.background }}
-              >
-                <div className="experience p-4 rounded-lg text-white">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h3 className="text-lg font-bold">{exp.title}</h3>
-                      <p className="text-sm">{exp.company}</p>
-                      <p className="text-xs italic">{exp.duration}</p>
-                    </div>
-                    <div className="w-16 h-16 bg-gray-300 rounded-full" />
+            <div
+              className={`container7 ${index % 2 === 0 ? "right" : "left"}`}
+              style={{ backgroundColor: exp.background }}
+            >
+              <div className="experience p-4 rounded-lg text-white">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="text-lg font-bold">{exp.title}</h3>
+                    <p className="text-sm">{exp.company}</p>
+                    <p className="text-xs italic">{exp.duration}</p>
                   </div>
-                  <ul className="mt-2 text-sm list-disc list-inside">
-                    {exp.description.map((point, i) => (
-                      <li key={i}>{point}</li>
-                    ))}
-                  </ul>
+                  <div className="w-16 h-16 bg-gray-300 rounded-full" />
                 </div>
+                <ul className="mt-2 text-sm list-disc list-inside">
+                  {exp.description.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
+                </ul>
               </div>
-            </Fade>
+            </div>
           ))}
         </div>
       </div>
