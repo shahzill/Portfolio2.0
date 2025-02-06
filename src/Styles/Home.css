@@ -25,6 +25,7 @@
 .title {
   color: white;
   font-size: 70px;
+  font-weight: 700;
 }
 
 .Red {
@@ -63,8 +64,8 @@
 }
 .About{
   color: white;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 700;
   margin: 0px 20%;
 }
 

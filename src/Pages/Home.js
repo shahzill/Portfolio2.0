@@ -5,6 +5,10 @@ import { TbBrandCSharp } from "react-icons/tb";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
 import curve from "../Media/notch.png";
+import AUCLogo from "../Media/LogoAUC.png";
+import ScratchZeroLogo from "../Media/LogoScratchZero.png";
+import PSSLogo from "../Media/LogoPSS.png";
+import PULogo from "../Media/LogoPU.jpg";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "../Styles/Home.css";
 import {
@@ -48,6 +52,7 @@ function Home() {
   ];
   const experiences = [
     {
+      logo: AUCLogo,
       title: "Systems Developer Intern",
       company: "Alberta Utilities Commission",
       location: "Calgary, Canada",
@@ -63,6 +68,7 @@ function Home() {
       background: "White",
     },
     {
+      logo: ScratchZeroLogo,
       title: "Developer",
       company: "ScratchZero",
       duration: "June, 2023 - Present",
@@ -76,6 +82,7 @@ function Home() {
       background: "Black",
     },
     {
+      logo: PSSLogo,
       title: "Vice President of Events",
       company: "Pakistani Student Society, University of Calgary",
       duration: "March, 2022 - March, 2023",
@@ -87,6 +94,7 @@ function Home() {
       background: "White",
     },
     {
+      logo: PULogo,
       title: "Data Analyst Student Intern",
       company: "CEES, The University of Punjab",
       duration: "June, 2018 - January, 2019",
@@ -314,7 +322,13 @@ function Home() {
                     <p className="text-sm">{exp.company}</p>
                     <p className="text-xs italic">{exp.duration}</p>
                   </div>
-                  <div className="w-16 h-16 bg-gray-300 rounded-full" />
+                  <div className="w-16 h-16 bg-white rounded-full overflow-hidden">
+                    <img
+                      src={exp.logo}
+                      alt="Company Logo"
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
                 </div>
                 <ul className="mt-2 text-sm list-disc list-inside line-height-experience">
                   {exp.description.map((point, i) => (
