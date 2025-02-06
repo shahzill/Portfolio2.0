@@ -53,7 +53,6 @@ function Navbar() {
       </button>
     </header>
   );
-  <script>const</script>;
 }
 
 export default Navbar;
