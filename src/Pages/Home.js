@@ -5,7 +5,6 @@ import { TbBrandCSharp } from "react-icons/tb";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
 import curve from "../Media/notch.png";
-import logo from "../Media/WhiteUofC.png";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "../Styles/Home.css";
 import {
@@ -20,13 +19,12 @@ import {
   SiCplusplus, // Works for C++
   SiBlazor, // Works for Blazor
   SiGit, // Works for Git
-  SiAzuredevops, // Works for Azure DevOps
   SiDocker, // Works for Docker
   SiSelenium, // Works for Selenium
   SiJunit5, // Works for JUnit
 } from "react-icons/si";
 
-import { FaJava, FaJira, FaGitAlt } from "react-icons/fa"; // Java, JIRA, Git Alternative
+import { FaJava, FaJira } from "react-icons/fa"; // Java, JIRA, Git Alternative
 import { DiDatabase } from "react-icons/di"; // General SQL/Database Icon
 import { TbBrandVisualStudio, TbBrandVscode } from "react-icons/tb"; // VS & VS Code
 import { BiSolidServer } from "react-icons/bi"; // SQL Server Studio (Alternative)
