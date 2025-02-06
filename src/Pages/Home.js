@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
 import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
 import Fade from "react-reveal/Fade";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
@@ -8,6 +9,30 @@ import curve from "../Media/notch.png";
 import logo from "../Media/WhiteUofC.png";
 import { motion, useTransform, useScroll } from "framer-motion";
 import "../Styles/Home.css";
+import {
+  SiJavascript,
+  SiHtml5,
+  SiCss3,
+  SiPython,
+  SiNodedotjs,
+  SiReact,
+  SiDjango,
+  SiMysql, // Works for MySQL
+  SiCplusplus, // Works for C++
+  SiBlazor, // Works for Blazor
+  SiGit, // Works for Git
+  SiAzuredevops, // Works for Azure DevOps
+  SiDocker, // Works for Docker
+  SiSelenium, // Works for Selenium
+  SiJunit5, // Works for JUnit
+} from "react-icons/si";
+
+import { FaJava, FaJira, FaGitAlt } from "react-icons/fa"; // Java, JIRA, Git Alternative
+import { DiDatabase } from "react-icons/di"; // General SQL/Database Icon
+import { TbBrandVisualStudio, TbBrandVscode } from "react-icons/tb"; // VS & VS Code
+import { BiSolidServer } from "react-icons/bi"; // SQL Server Studio (Alternative)
+//import { SiCloud } from "react-icons/si"; // Cloud icon, a good substitute for Azure
+import { VscSymbolNamespace } from "react-icons/vsc"; // Alternative for Eclipse
 
 function Home() {
   const [animate, setAnimate] = useState(false);
@@ -281,9 +306,119 @@ function Home() {
       </div>
       <div className="comp7">
         <h1 className="TechStackHeader">
-          <span className="Red">My </span>
-          <span>TechStack </span>
+          <span className="Red">Tech </span>
+          <span>Ecosystem </span>
         </h1>
+        <div className="allStack">
+          <div className="stack">
+            <SiJavascript className="stackIcon" style={{ color: "#f7df1e" }} />{" "}
+            JavaScript
+          </div>
+
+          <div className="stack">
+            <SiHtml5 className="stackIcon" style={{ color: "#e34c26" }} /> HTML
+          </div>
+
+          <div className="stack">
+            <SiCss3 className="stackIcon" style={{ color: "#2965f1" }} /> CSS
+          </div>
+
+          <div className="stack">
+            <SiPython className="stackIcon" style={{ color: "#306998" }} />{" "}
+            Python
+          </div>
+
+          <div className="stack">
+            <SiNodedotjs className="stackIcon" style={{ color: "#8cc84b" }} />{" "}
+            NodeJS
+          </div>
+
+          <div className="stack">
+            <SiReact className="stackIcon" style={{ color: "#61dafb" }} /> React
+          </div>
+
+          <div className="stack">
+            <SiDjango className="stackIcon" style={{ color: "#092e20" }} />{" "}
+            Django
+          </div>
+
+          <div className="stack">
+            <TbBrandCSharp className="stackIcon" style={{ color: "#178600" }} />{" "}
+            C#
+          </div>
+
+          <div className="stack">
+            <SiMysql className="stackIcon" style={{ color: "#00618d" }} /> MySQL
+          </div>
+
+          <div className="stack">
+            <DiDatabase className="stackIcon" style={{ color: "#4e5b62" }} />{" "}
+            SQL (General)
+          </div>
+
+          <div className="stack">
+            <BiSolidServer className="stackIcon" style={{ color: "#4d4d4d" }} />{" "}
+            SQL Server Studio
+          </div>
+
+          <div className="stack">
+            <SiCplusplus className="stackIcon" style={{ color: "#00599c" }} />{" "}
+            C++
+          </div>
+
+          <div className="stack">
+            <FaJava className="stackIcon" style={{ color: "#f8981d" }} /> Java
+          </div>
+
+          <div className="stack">
+            <SiBlazor className="stackIcon" style={{ color: "#5a2e8c" }} />{" "}
+            Blazor
+          </div>
+
+          <div className="stack">
+            <SiGit className="stackIcon" style={{ color: "#f34f29" }} /> Git
+          </div>
+
+          <div className="stack">
+            <SiJunit5 className="stackIcon" style={{ color: "#25a000" }} />{" "}
+            JUnit Testing
+          </div>
+
+          <div className="stack">
+            <FaJira className="stackIcon" style={{ color: "#0062ff" }} /> JIRA
+          </div>
+
+          <div className="stack">
+            <TbBrandVscode className="stackIcon" style={{ color: "#007acc" }} />{" "}
+            VS Code
+          </div>
+
+          <div className="stack">
+            <TbBrandVisualStudio
+              className="stackIcon"
+              style={{ color: "#5c2d91" }}
+            />{" "}
+            Visual Studio
+          </div>
+
+          <div className="stack">
+            <VscSymbolNamespace
+              className="stackIcon"
+              style={{ color: "#b3b3b3" }}
+            />{" "}
+            Eclipse
+          </div>
+
+          <div className="stack">
+            <SiSelenium className="stackIcon" style={{ color: "#43b02a" }} />{" "}
+            Selenium
+          </div>
+
+          <div className="stack">
+            <SiDocker className="stackIcon" style={{ color: "#2496ed" }} />{" "}
+            Docker
+          </div>
+        </div>
       </div>
     </>
   );
