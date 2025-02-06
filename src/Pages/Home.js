@@ -258,7 +258,7 @@ function Home() {
         </div>
       </div>
       <div className="curve">
-        <img src={curve} />
+        <img src={curve} alt="" />
       </div>
       <div className="comp2" id="Our-Services">
         <h1 className="ExperienceHeader">
