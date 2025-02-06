@@ -41,6 +41,7 @@ function Home() {
   const [animate2, setAnimate2] = useState(false);
   const [animate3, setAnimate3] = useState(false);
   const [animate4, setAnimate4] = useState(false);
+  const [animate5, setAnimate5] = useState(false);
   const containerRef = useRef(null);
   const cards = [
     {
@@ -115,19 +116,22 @@ function Home() {
           setAnimate(true);
           setTimeout(() => {
             setAnimate1(true);
-          }, 500); // 0.5 seconds delay
+          }, 300); // 0.5 seconds delay
 
           setTimeout(() => {
             setAnimate2(true);
-          }, 1000); // 1 second delay
+          }, 600); // 1 second delay
 
           setTimeout(() => {
             setAnimate3(true);
-          }, 1500); // 1.5 seconds delay
+          }, 900); // 1.5 seconds delay
 
           setTimeout(() => {
             setAnimate4(true);
-          }, 2000); // 2 seconds delay
+          }, 1200); // 2 seconds delay
+          setTimeout(() => {
+            setAnimate5(true);
+          }, 1500); // 2 seconds delay
 
           observer.disconnect(); // Disconnect the observer once it triggers
         }
@@ -292,7 +296,11 @@ function Home() {
       </div>
       <div className="comp2" id="Our-Services">
         <h1 className="ExperienceHeader">
-          <span className="Red">Exper</span>
+          <span className={`${animate ? "" : "Red"}`}>E</span>
+          <span className={`${animate1 ? "" : "Red"}`}>x</span>
+          <span className={`${animate2 ? "" : "Red"}`}>p</span>
+          <span className={`${animate3 ? "" : "Red"}`}>e</span>
+          <span className={`${animate4 ? "" : "Red"}`}>r</span>
           <span className={`${animate4 ? "" : "Red"}`}>i</span>
           <span className={`${animate3 ? "" : "Red"}`}>e</span>
           <span className={`${animate2 ? "" : "Red"}`}>n</span>
@@ -301,7 +309,7 @@ function Home() {
         </h1>
         <div
           ref={containerRef}
-          className={`container6 relative ${animate ? "animate-line" : ""}`}
+          className={`container6 relative ${animate5 ? "animate-line" : ""}`}
           id="Experience"
         >
           {experiences.map((exp, index) => (
@@ -330,7 +338,7 @@ function Home() {
                     />
                   </div>
                 </div>
-                <ul className="mt-2 text-sm list-disc list-inside line-height-experience">
+                <ul className="mt-2 text-sm list-disc line-height-experience">
                   {exp.description.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}
