@@ -8,11 +8,6 @@
 	
 }
 
-
-img{
-	max-height: 100%;
-}
-
 header {
 	display: flex;
 	align-items: center;
@@ -30,12 +25,12 @@ header {
 	height: 70%;
 }
 
-nav{
-	margin-right: 10%;
-	align-content: center;
-	justify-content: center;
-	
-}
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;  /* Center the links horizontally */
+	flex-grow: 1;  /* Ensures nav takes available space */
+  }
 
 .Link {
 	margin: 0 1rem;
@@ -71,8 +66,6 @@ nav {
 
 header.active{
 	background-color: black ;
-
-
 }
 
 @media only screen and (max-width: 1024px) {

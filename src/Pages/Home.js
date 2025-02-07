@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Navbar from "./Navbar";
-import { FaInstagram, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 import Particles from "../Components/Particles";
 import { ReactTyped } from "react-typed";
@@ -10,6 +10,7 @@ import ScratchZeroLogo from "../Media/LogoScratchZero.png";
 import PSSLogo from "../Media/LogoPSS.png";
 import PULogo from "../Media/LogoPU.jpg";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
 import "../Styles/Home.css";
 import {
   SiJavascript,
@@ -221,16 +222,16 @@ function Home() {
             </p>
           </div>
           <div className="contact-me-btn">
-            <a href="/#ContactUs" className="btn btn-white btn-animate">
-              Contact Me
-            </a>
+            <Link className="btn btn-white btn-animate" smooth to="#AboutMe">
+              About Me
+            </Link>
           </div>
         </div>
         <Particles id="tsparticles" />
       </div>
 
       {/* Second Section */}
-      <div className="comp3" id="AboutUs">
+      <div className="comp3" id="AboutMe">
         <div className="subcomp3">
           {/* About Section */}
           <div className="About">
@@ -307,25 +308,18 @@ function Home() {
         <div className="Social-Links">
           <div className="Content3">
             <a
-              href="https://www.linkedin.com/company/scratchzero/"
+              href="https://www.linkedin.com/in/shahzill-naveed/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="scale1 Red" />
             </a>
             <a
-              href="https://www.instagram.com/scratchzero_/"
+              href="https://github.com/shahzill"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="scale1 Red" />
-            </a>
-            <a
-              href="https://www.facebook.com/scratchzero.net?mibextid=LQQJ4d"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebookSquare className="scale1 Red" />
+              <FaGithub className="scale1 Red" />
             </a>
           </div>
         </div>
@@ -333,7 +327,7 @@ function Home() {
       <div className="curve">
         <img src={curve} alt="" />
       </div>
-      <div className="comp2" id="Our-Services">
+      <div className="comp2" id="Experience">
         <h1 className="ExperienceHeader">
           <span className={`${animate ? "" : "Red"}`}>E</span>
           <span className={`${animate1 ? "" : "Red"}`}>x</span>
@@ -387,10 +381,10 @@ function Home() {
           ))}
         </div>
       </div>
-      <div>
+      <div id="Education">
         <HorizontalScrollCarousel />
       </div>
-      <div className="comp7">
+      <div className="comp7" id="TechStack">
         <h1 className="TechStackHeader">
           <span className="Red">Tech </span>
           <span>Ecosystem </span>

@@ -28,20 +28,17 @@ function Navbar() {
         <Link className="Link" smooth to="/#">
           Home
         </Link>
-        <Link className="Link" smooth to="#AboutUs">
-          About Us
+        <Link className="Link" smooth to="#AboutMe">
+          About Me
         </Link>
-        <Link className="Link" smooth to="#Our-Services">
-          Services
+        <Link className="Link" smooth to="#Experience">
+          Experience
         </Link>
-        <Link className="Link" smooth to="#Portfolio">
-          Portfolio
+        <Link className="Link" smooth to="#Education">
+          Education
         </Link>
-        <Link className="Link" smooth to="#Pricing">
-          Pricing
-        </Link>
-        <Link className="Link" smooth to="#ContactUs">
-          Contact Us
+        <Link className="Link" smooth to="#TechStack">
+          TechStack
         </Link>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
