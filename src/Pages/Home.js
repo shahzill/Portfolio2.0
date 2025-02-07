@@ -209,7 +209,11 @@ function Home() {
             <p>
               <ReactTyped
                 className="typing"
-                strings={["Software Developer", "Athlete", "Fun Guy"]}
+                strings={[
+                  "Code, create, debug, repeat",
+                  "If it’s a sport, I’m playing it.",
+                  "New places? I’m already on my way",
+                ]}
                 typeSpeed={100}
                 backSpeed={50}
                 loop
@@ -235,31 +239,66 @@ function Home() {
                 <span>About </span>
                 <span className="Red">Me </span>
               </h1>
-              <p>
-                At{" "}
-                <strong>
-                  <span className="Red">ScratchZero</span>
-                </strong>
-                , we are dedicated to{" "}
-                <strong>
-                  <span className="Red">revolutionizing </span>
-                </strong>{" "}
-                the way businesses and individuals engage with technology. Our
-                mission is clear: to{" "}
-                <strong>
-                  <span className="Red">empower our clients </span>
-                </strong>{" "}
-                with{" "}
-                <strong>
-                  <span className="Red">innovative software solutions </span>
-                </strong>
-                that cut through complexities and pave the way for{" "}
-                <strong>
-                  <span className="Red">unparalleled growth</span>
-                </strong>
-                . We are not just a software company; we are your partner in
-                progress.
-              </p>
+              <div className="AboutMeText">
+                <p>
+                  Hey there! 👋 I'm a{" "}
+                  <strong>
+                    <span className="Red">software developer</span>
+                  </strong>{" "}
+                  by day and an{" "}
+                  <strong>
+                    <span className="Red">athlete, explorer</span>
+                  </strong>
+                  , and all-around{" "}
+                  <strong>
+                    <span className="Red">people person</span>
+                  </strong>{" "}
+                  by night (or whenever I’m not buried in code).
+                </p>
+
+                <p>
+                  I write code that sometimes works on the{" "}
+                  <strong>
+                    <span className="Red">first try</span>
+                  </strong>{" "}
+                  (rare, but legendary). When I’m not debugging my life—or my
+                  programs—you’ll find me{" "}
+                  <strong>
+                    <span className="Red">
+                      playing sports, hiking up random mountains
+                    </span>
+                  </strong>
+                  , or trying to convince my friends that a{" "}
+                  <strong>
+                    <span className="Red">"quick road trip"</span>
+                  </strong>{" "}
+                  is a great idea.
+                </p>
+
+                <p>
+                  I love{" "}
+                  <strong>
+                    <span className="Red">meeting new people</span>
+                  </strong>
+                  ,{" "}
+                  <strong>
+                    <span className="Red">solving complex problems</span>
+                  </strong>
+                  , and discovering{" "}
+                  <strong>
+                    <span className="Red">cool places</span>
+                  </strong>{" "}
+                  (both in real life and in my code). If you ever want to talk{" "}
+                  <strong>
+                    <span className="Red">tech, sports</span>
+                  </strong>
+                  , or why{" "}
+                  <strong>
+                    <span className="Red">Ctrl+Z</span>
+                  </strong>{" "}
+                  is the greatest invention of all time, hit me up!
+                </p>
+              </div>
             </div>
           </div>
         </div>

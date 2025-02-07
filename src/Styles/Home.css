@@ -35,7 +35,7 @@
 }
 
 .typing {
-  font-size: 55px;
+  font-size: 45px;
   color: white;
   font-weight: 400;
 }
@@ -61,6 +61,7 @@
 
 .comp3{
   min-height: 50vh;
+  margin-bottom: 100px;
 }
 .About{
   color: white;
@@ -73,7 +74,9 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 30px;
+  margin-bottom: 20px;
 }
+
 .Content3{
   display: flex;
   text-align: center;
@@ -283,6 +286,8 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+  z-index: -1;
+  padding-top: 20px;
   /* Remove z-index here */
 }
 
@@ -564,7 +569,7 @@
     align-items: center;
     text-align: center;
     padding-right: 0%;
-    margin-top: 25%;
+    margin-top: 40%;
   }
 
   .title {
@@ -655,7 +660,13 @@
     padding: 10px 20px;
   }
 
+  .education-content{
+    padding: 20px;
+    text-align: center;
+  }
+
   .comp7{
     background-size: contain;
+    background-image: none;
   }
 }
