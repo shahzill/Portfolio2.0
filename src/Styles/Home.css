@@ -179,8 +179,11 @@
   z-index: 1;
 }
 
-.experience:hover .color-on-hover{
-  color: #f4543c;
+@media (pointer: fine) {
+  /* Styles for non-touchscreen devices (e.g., mouse input) */
+  b.experience:hover .color-on-hover{
+    color: #f4543c;
+  }
 }
 
 .left {
@@ -232,6 +235,9 @@
   color: white;
 }
 
+.comp2{
+  margin-bottom: 40px;
+}
 .BlackColor{
   color: black;
 }
@@ -602,6 +608,20 @@
     margin-bottom: 20px;
   }
   
+  .BlackColor-Hover-Change:hover{
+    color: black;
+    background-color: white;
+  }
+  
+  .WhiteColor-Hover-Change:hover{
+    color: white;
+    background-color: black;
+  }
+
+  .experience:hover{
+    transform: scale(1);
+    z-index: 1;
+  }
 
   .About{
     font-size: 40px;
@@ -670,3 +690,4 @@
     background-image: none;
   }
 }
+
