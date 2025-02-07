@@ -180,13 +180,6 @@
   z-index: 1;
 }
 
-@media (pointer: fine) {
-  /* Styles for non-touchscreen devices (e.g., mouse input) */
-  b.experience:hover .color-on-hover{
-    color: #f4543c;
-  }
-}
-
 .left {
   left: 0;
   margin-left: 5%;
@@ -293,7 +286,7 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   padding-top: 20px;
   /* Remove z-index here */
 }
@@ -671,6 +664,10 @@
 
   .stackIcon {
     font-size: 50px;
+  }
+
+  .stackIcon:hover {
+    transform: scale(1);
   }
 
   .TechStackHeader{
