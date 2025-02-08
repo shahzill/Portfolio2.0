@@ -391,11 +391,6 @@ function Home() {
         </h1>
         <div className="allStack">
           <div className="stack">
-            <SiJavascript className="stackIcon" style={{ color: "#f7df1e" }} />{" "}
-            JavaScript
-          </div>
-
-          <div className="stack">
             <SiHtml5 className="stackIcon" style={{ color: "#e34c26" }} /> HTML
           </div>
 
@@ -404,17 +399,22 @@ function Home() {
           </div>
 
           <div className="stack">
-            <SiPython className="stackIcon" style={{ color: "#306998" }} />{" "}
-            Python
-          </div>
-
-          <div className="stack">
-            <SiNodedotjs className="stackIcon" style={{ color: "#8cc84b" }} />{" "}
-            NodeJS
+            <SiJavascript className="stackIcon" style={{ color: "#f7df1e" }} />{" "}
+            JavaScript
           </div>
 
           <div className="stack">
             <SiReact className="stackIcon" style={{ color: "#61dafb" }} /> React
+          </div>
+
+          <div className="stack">
+            <SiBlazor className="stackIcon" style={{ color: "#5a2e8c" }} />{" "}
+            Blazor
+          </div>
+
+          <div className="stack">
+            <SiPython className="stackIcon" style={{ color: "#306998" }} />{" "}
+            Python
           </div>
 
           <div className="stack">
@@ -423,10 +423,23 @@ function Home() {
           </div>
 
           <div className="stack">
+            <SiNodedotjs className="stackIcon" style={{ color: "#8cc84b" }} />{" "}
+            NodeJS
+          </div>
+
+          <div className="stack">
             <TbBrandCSharp className="stackIcon" style={{ color: "#178600" }} />{" "}
             C#
           </div>
 
+          <div className="stack">
+            <SiCplusplus className="stackIcon" style={{ color: "#00599c" }} />{" "}
+            C++
+          </div>
+
+          <div className="stack">
+            <FaJava className="stackIcon" style={{ color: "#f8981d" }} /> Java
+          </div>
           <div className="stack">
             <SiMysql className="stackIcon" style={{ color: "#00618d" }} /> MySQL
           </div>
@@ -440,21 +453,6 @@ function Home() {
             <BiSolidServer className="stackIcon" style={{ color: "#4d4d4d" }} />{" "}
             SQL Server Studio
           </div>
-
-          <div className="stack">
-            <SiCplusplus className="stackIcon" style={{ color: "#00599c" }} />{" "}
-            C++
-          </div>
-
-          <div className="stack">
-            <FaJava className="stackIcon" style={{ color: "#f8981d" }} /> Java
-          </div>
-
-          <div className="stack">
-            <SiBlazor className="stackIcon" style={{ color: "#5a2e8c" }} />{" "}
-            Blazor
-          </div>
-
           <div className="stack">
             <SiGit className="stackIcon" style={{ color: "#f34f29" }} /> Git
           </div>
