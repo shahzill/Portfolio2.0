@@ -62,6 +62,7 @@ function Home() {
       description: [
         "Developed web applications using Blazor, HTML, CSS, C#, Entity Framework, REST API, and SQL to deliver efficient and user-friendly solutions.",
         "Collaborated with a team of 7 professionals, actively participating in code reviews and contributing to an Azure repository to ensure seamless code integration.",
+        "Served as a Junior Project Manager, coordinating team efforts, ensuring timely delivery of milestones, and facilitating communication between stakeholders.",
         "Engaged in agile development methodologies, working in sprints to meet project milestones and deadlines.",
         "Implemented and tested new functionalities within applications, ensuring high-quality code and optimal user experiences.",
         "Enhanced UI with Radzen, ensuring smooth development, and implemented Fluent Validation for robust data validation, elevating application quality.",
